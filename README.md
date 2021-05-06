@@ -1,13 +1,13 @@
 # hmgchallenge_public
 
-this repository is public mirror of private repesitory hmgchallenge_final
-it may not work alone because only a few parts have been mirrored
+this repository is public mirror of private repesitory hmgchallenge_final  
+it may not work alone because only a few parts have been mirrored  
 
-you can find missing files and git history from
-https://github.com/SNUZERO2021/hmgchallenge_final
-https://github.com/SNUZERO2021/hmgchallenge_v4
-https://github.com/SNUZERO2021/hmgchallenge_v3
-https://github.com/SNUZERO2021/hmgchallenge
+you can find missing files and git history from  
+https://github.com/SNUZERO2021/hmgchallenge_final  
+https://github.com/SNUZERO2021/hmgchallenge_v4  
+https://github.com/SNUZERO2021/hmgchallenge_v3  
+https://github.com/SNUZERO2021/hmgchallenge  
 
 ----
 

@@ -1,0 +1,102 @@
+# In SI Unit
+#Debug
+pp_debug : True
+pp_visual : True
+pp_time_debug : False
+
+#Car
+vehicle_front_overhang: 0.8424 # front end to front wheel
+vehicle_front_length: 1.37 # front wheel to mass center
+vehicle_rear_length: 1.33 # mass center to real wheel
+vehicle_rear_overhang: 0.8326 # rear wheel to rear end
+vehicle_orgin_type: 0 # -2:rear end, -1: rear wheel, 0: mass center, 1: front wheel, 2: front end 
+vehicle_orgin_offset: 0.0 # vehicle orgin from vehicle_orgin_type(rear to front)
+vehicle_width: 1.805
+steering_ratio: 14.317695 # steering wheel angle / vehicle wheel angle
+understeer_gradient: 0.0007808
+
+
+#Vehicle Info
+std_accrate : 30.0 # standard acceration change per time
+std_acczrate : 30.0
+std_yawaccrate : 100.0 # standard yawrate change per time
+std_rollpitchrate : 0.1 # standard roll, pitch vel
+x_std_err : 1.5 # pos observation standard deviation
+v_std_err : 0.05 # vel observation standard deviaiton
+a_std_err : 1.0 # acc observation standard deviaiton
+xz_std_err : 0.5
+vz_std_err : 0.05
+az_std_err : 1.0
+yaw_std_err : 0.01 # yaw observation standard deviaiton
+yawrate_std_err : 0.05 # yawrate observation standard deviaiton
+yawacc_std_err : 0.25 # yawacc observation standard deviaiton
+rollpitch_std_err : 0.01
+slip_std_err : 1.0
+latacc_std_err : 1.0
+
+# Hyperparameters
+max_speed: 12.0
+max_accel: 2.0    #양의 가속도 한계
+max_break : 2.0   #음의 가속도 한계
+max_curvature: 0.3
+max_road_width_l: 1.9   #왼쪽(+l) 탐색 범위
+max_road_width_r: 1.9   #오른쪽(-l) 탐색 범위
+d_road_w: 0.15  #횡(l) 탐색 간격
+max_ds : 0.9    #(점추종) 종(+s,-s) 탐색 범위
+ds : 0.3    #(점추종) 종(s) 탐색 간격
+safe_0 : 3.98 #속도가 0일 때 앞차와의 안전거리(내 차 질량중심(vehicle info)와 앞차의 s_min(prediction) 차이)
+safe_1 : 1.0 #속도 1당 앞차와의 안전거리
+#10m/s기준 : 느릴 수록 더 긴 시간 사용####
+#dt: 0.2   #경로 시간 탐색 간격 (경로 후반부 충돌 판정 간격이기도 함)
+#maxt: 2.0   #최대 경로 시간
+#mint: 0.4   #최소 경로 시간
+#target_s : 0.9    #선호하는 경로 시간
+####
+ds_length : 2.0 #경로 시간 탐색 간격에 해당하는 길이(경로 후반부 충돌 판정 간격이기도 함)
+max_s_length : 12.0 #최대 경로 길이
+min_s_length : 8.0 #최소 경로 길이
+target_s_length : 9.0 #권장 경로 길이
+planning_t : 0.10    #경로 계획 주기 (이 시간마다 planning을 다시 함)
+control_t : 0.10    #제어 주기 (이 시간마다 제어값을 변경시킴)
+d_t_s: 0.5    #(속도 유지) 종(s) 탐색 간격 (10m/s 기준)
+n_s_sample: 3   #(속도 유지) 종(+s, -s) 탐색 횟수
+obstacle_clearance: 0.1
+kend: 1.0 #목표와의 차이 비용 계수
+kd: 1.0   #위치 차이 비용 계수
+kv: 0.0005   #속도 비용 계수
+ka: 0.0005   #가속도 비용 계수
+kj: 0.002   #jerk 비용 계수
+kt: 0.01  #시간 비용 계수
+ko: 1.0   #장애물 비용 계수
+klat: 1.0   #횡방향(l) 비용 계수
+klon: 0.5   #종방향(s) 비용 계수
+max_steer_diff: 100.0 #최대 steering 변화
+
+# Control Parameter
+SteeringWheel : 0
+Ax : 0
+GearNo : 1
+SwitchOn : 1
+
+# Initial Condition - not using param yet
+s0: 0
+c_speed : 0
+
+c_d : 0
+c_d_d : 0
+c_d_dd : 0
+
+target_speed: 6
+
+wx : [0, 30, 65, 95]
+wy : [0, 2, 18, 20]
+nw : 4
+
+o_llx : [25.0, 40.0, 57.0]
+o_lly : [0.4, -2.2, -2.1]
+o_urx : [30.0, 45.0, 62.0]
+o_ury : [2.2, -0.4, -0.3]
+   
+n0 : 0
+obs: [[48, -2, 52, 2], [98, -4, 102, 2], [98, 6, 102, 10], [128, 2, 132, 6]]
+

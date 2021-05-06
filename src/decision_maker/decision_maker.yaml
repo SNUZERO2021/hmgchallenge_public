@@ -1,0 +1,42 @@
+# Else
+dm_debug: False
+dm_time_debug: False
+
+# waypoint mode
+dm_waypoint_mode: True                  # check global_map/waypoint/waypoint.csv
+dm_waypoint_debug: True
+
+# decision maker
+dm_normal_driving_speed_ratio: 0.7      # 일반주행 시 목표 속도
+dm_lane_change_speed_ratio: 0.6         # 차선변경 시 목표 속도
+dm_caution_speed_ratio: 0.3             # 보행자 인지시 속도
+dm_threshold_finish_inter: 5.0         # 교차로가 끝났다고 미리 판단하는 s 거리
+dm_threshold_next_segment: 0.0          # 다음 segment가 되었다고 미리 판단하는 s 거리
+dm_threshold_stop_s: 10.0               # 앞차가 정지선 앞에서 정지했다고 판단하는 s 범위
+dm_threshold_stop_ds: 0.1               # 앞차가 정지했다고 판단하는 ds 범위
+dm_threshold_start_time: 5.0            # 앞차가 신호로 정지했다가 출발할 때까지 걸리는 시간
+dm_threshold_object_l_range: 0.5        # 장애물이 내 차선에 들어왔다고 판단하는 l 범위
+dm_threshold_vehicle_l_range: 1.5       # 차가 내 차선에 들어왔다고 판단하는 l 범위
+dm_threshold_pedestrian_l_range: 2.0    # 보행자가 내 차선에 들어왔다고 판단하는 l 범위
+dm_threshold_complete_lc_l: 0.1         # 차선변경했다고 판단하는 l 범위
+dm_threshold_complete_lc_dl: 0.1        # 차선변경했다고 판단하는 dl 범위
+dm_threshold_complete_lc_s: 5.0         # 차선변경 안정화 거리
+dm_threshold_lane_change_count: 3       # 차선변경 판단 버퍼
+dm_pedestrian_time: 3.0                 # 보행자가 t초 내에 내 차선에 들어오는지 확인
+dm_pedestrian_safe: 5.0                 # 보행자 안전거리 (vehicle info 기준)
+dm_stop_safe: 4.0                       # 정지선 안전거리 (vehicle info 기준)
+dm_stop_v_s_ratio: 0.2                  # v = k s 로 정지 속도추종
+dm_stop_brake: 2.0                      # 제동거리 계산 가속도
+dm_braking_distance_offset: 10.0        # 제동거리 + offset 거리 안에서 정지 판단
+dm_stop_fc_dist: 4.0                    # 앞차와의 정지 거리 (vehicle info 기준, 앞차는 s_min)
+
+dm_left_l_offset: -0.1                  # 최좌측 차선 l offset
+dm_right_l_offset: 0.1                  # 최우측 차선 l offset
+
+dm_o_safe: 3.0                          # 장애물과 최소 거리
+dm_t_lc: 2.0                            # 차선변경 걸리는 시간
+dm_lc_penalty: 2.0                      # 차선변경 한번의 페널티 시간
+dm_d_inter: 33.0                        # 교차로 진입 거리
+dm_d_minlc: 15.0                        # 차선변경 최소 거리
+dm_d_avglc: 35.0                        # 차선변경 할만한 거리
+dm_jam_speed: 1.5                       # 차선이 막혔다고 생각하는 속도

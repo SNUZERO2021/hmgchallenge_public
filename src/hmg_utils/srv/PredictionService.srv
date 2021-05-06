@@ -1,0 +1,4 @@
+float64[] time
+---
+hmg_utils/BoxArray[] predictions
+hmg_utils/ConvexHull[] static_obstacles

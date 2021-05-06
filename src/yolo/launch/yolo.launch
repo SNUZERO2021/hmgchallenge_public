@@ -1,0 +1,7 @@
+<launch>
+  <arg name="cfg_file" value="$(find yolo)/config/yolo-obj.cfg" />
+  <arg name="weight_file" value="$(find yolo)/config/yolo.weights"/>
+  <arg name="data_file" value="$(find yolo)/config/obj.data"/>
+
+  <node name="yolo" pkg="yolo" type="yolo.py" args="--config_file $(arg cfg_file) --weights $(arg weight_file) --data_file $(arg data_file)" output="screen"/>
+</launch>

@@ -1,0 +1,13 @@
+Header header
+int32 state
+int32 task
+int32 next_task
+int32 motion
+int32 current_segment
+int32 next_segment
+int32 changing_segment
+int32 changing_dir
+bool intersection
+string[] back_cars
+float64 s_min
+Target[] targets

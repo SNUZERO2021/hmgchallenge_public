@@ -1,0 +1,9 @@
+Header header
+float64 preprocessing
+float64 clustering_raw_data
+float64 remove_dynamic_obstacles
+float64 voxel_reconstruction
+float64 clustering_static_obstacles
+float64 static_obstacles_detection
+float64 dynamic_obstacles_prediction
+float64 total_time

@@ -1,0 +1,2 @@
+string[] prv
+string[] cur

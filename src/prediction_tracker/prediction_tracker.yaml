@@ -1,0 +1,64 @@
+# mode
+ideal: True # object sensor on/off
+
+# debug
+prediction_debug: True # debug on/off
+prediction_time_debug: False # time debug on/off
+prediction_visualize: False # visualize on/off
+
+# dynamic obstacle configuration
+dt: 0.1 # [sec] prediction time interval
+maxn: 20 # number of prediction 
+Cs: 0.2 # s-prediction offset coefficient
+Cl: 0.1 # l-prediction offset coefficient
+theta_threshold: 90.0 # [degree] theta error limit for filtering possible segment in cross road
+l_threshold: 1.8 # [m] if a object is as far as a certain distance from such segment, skip this segment 
+vl_limit: 0.4 # [m/s] l-direction velocity limitation
+
+# static obstacle configuration
+err_theta: 5.0 # [degree] object sensor theta error 
+edge_threshold: 1.1 # [pixel] distance threshold for euclidean clustering 
+cluster_threshold: 5 # minimum number of point clouds in cluster
+plane_tolerance: 0.2 # [m] thickness plane for removing ground
+dynamic_tolerance: 1.5 # [m] minimum distance for matching dynamic obstacles and convex hulls
+area_ratio_threshold: 2.0 # maximum area ratio for mathcing dynamic obstacles and convex hulls 
+convex_hull_clustering_threshold: 0.5 # [m] distance tolerance for merging convex hull clusters
+cost_time_threshold: 0.7 # [sec] queue buffer time for global cost map
+cost_valid_threshold: 2 # minimum number of hit count for static obstacle validation
+dynamic_deleted_threshold: 0.1 # [m] delete dynamic obstacles near by static obstacles
+
+# map configuration
+origin_x: 100 # [pixel] x-value of pixel of vehicle in local map
+origin_y: 200 # [pixel] y-value of pixel of vehicle in local map
+resolution: 0.1 # [m] resolution in the maps(local map and global map)
+
+# vehicle configuration
+CAR_W: 1.805 # [m] vehicle width
+CAR_L: 4.375 # [m] vehicle length
+CAR_X: 2.1626 # [m] x-value of vehicle mass center
+CAR_Y: 0.0 # [m] y-value of vehicle mass center
+CAR_Z: 0.0 # [m] z-value of vehicle mass center 
+
+# object sensor configuration
+object_sensor_X: -15.0 # [m] x-value of object sensor position
+object_sensor_Y: 0.0 # [m] y-value of object sensor position
+object_sensor_Z: 0.5 # [m] z-value of object sensor position
+object_sensor_ROLL: 0.0 # [degree] roll-value of object sensor orientation
+object_sensor_PITCH: 0.0 # [degree] pitch-value of object sensor orientation
+object_sensor_YAW: 0.0 # [degree] yaw-value of object sensor orientation
+
+# lidar1 configuration
+lidar_1_X: 2.25 # [m] x-value of lidar_1 position
+lidar_1_Y: 0.5 # [m] y-value of lidar_1 position
+lidar_1_Z: 2.0 # [m] z-value of lidar_1 position
+lidar_1_ROLL: 0.0 # [degree] roll-value of lidar_1 orientation
+lidar_1_PITCH: 0.0 # [degree] pitch-value of lidar_1 orientation
+lidar_1_YAW: 90.0 # [degree] yaw-value of lidar_1 orientation
+
+# lidar2 configuration
+lidar_2_X: 2.25 # [m] x-value of lidar_2 position
+lidar_2_Y: -0.5 # [m] y-value of lidar_2 position
+lidar_2_Z: 2.0 # [m] z-value of lidar_2 position
+lidar_2_ROLL: 0.0 # [degree] roll-value of lidar_2 orientation
+lidar_2_PITCH: 0.0 # [degree] pitch-value of lidar_2 orientation
+lidar_2_YAW: 0.0 # [degree] yaw-value of lidar_2 orientation

@@ -1,0 +1,6 @@
+classes= 2
+train  = x64/data/train.txt
+valid  = x64/data/train.txt
+names = /home/snuzero/hmgchallenge_v4/ros/ros1_ws/src/yolo/config/obj.names
+backup = backup/
+

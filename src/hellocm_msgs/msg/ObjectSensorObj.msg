@@ -1,0 +1,12 @@
+int32 ObjId
+string Name
+int32 type
+float64 l
+float64 w
+float64 h
+float64 zOff
+int32 obsv
+int32 dtct
+int32 InLane
+hellocm_msgs/ObservPoint RefPnt
+hellocm_msgs/ObservPoint NearPnt

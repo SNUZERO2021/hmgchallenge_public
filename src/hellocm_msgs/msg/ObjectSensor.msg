@@ -1,0 +1,9 @@
+Header header 
+string trtype
+int32 nObsvObjects
+int32[] ObsvObjects
+int32 relvTargetObjId
+hellocm_msgs/ObjectSensorObj relvTarget
+int32 Targ_Dtct
+float64 DrvLaneCurv
+hellocm_msgs/ObjectSensorObj[] Objects 

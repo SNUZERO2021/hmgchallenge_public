@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="decision_maker" name="decision_maker" type="decision_maker" output="screen" />
+  <node pkg="decision_maker" name="test_dm" type="test_dm" output="screen" />
+  <rosparam file="$(find decision_maker)/decision_maker.yaml" />
+</launch>

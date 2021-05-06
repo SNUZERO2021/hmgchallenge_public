@@ -1,0 +1,9 @@
+light_indicator: 0
+light_hazard: 0
+
+lcn_debug: True
+lcn_time_debug: False
+lcn_l_range: 0.3         # 방향지시등 끄는 l 범위
+lcn_check_l_range: 3.0   # dl을 check하는 segment가 만족해야하는 l 범위
+lcn_dl_range: 0.1        # 방향지시등 키는 dl 범위
+lcn_keep_light_time : 0.5  # 방향 지시등 유지 시간 

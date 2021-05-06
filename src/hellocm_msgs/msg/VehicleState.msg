@@ -1,0 +1,15 @@
+Header header
+string id
+float64[] rotation
+float64[] linear_vel
+float64[] angular_vel
+float64[] linear_accel
+float64[] angular_accel
+float64 steering_angle
+float64 accel_pedal
+float64 brake_pedal
+float64 gear_num
+float64[] imu_linear_vel
+float64[] imu_angular_vel
+float64[] imu_linear_acc
+float64[] imu_angular_acc

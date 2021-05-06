@@ -1,0 +1,11 @@
+int32 segment_index
+hmg_utils/ObjectInfo object_info
+float64[] s_min
+float64[] s_max
+float64[] l_min
+float64[] l_max
+float64[] s
+float64[] l
+float64[] v
+float64[] a
+float64[] t
